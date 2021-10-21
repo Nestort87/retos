@@ -33,7 +33,7 @@ public class Reservaciones implements Serializable  {
     @ManyToOne
     @JoinColumn(name = "id")
     @JsonIgnoreProperties("reservations")
-    private Boats boats;
+    private Boats boat;
 
     @ManyToOne
     @JoinColumn(name = "idClient")
@@ -74,12 +74,12 @@ public class Reservaciones implements Serializable  {
         this.status = status;
     }
 
-    public Boats getBoats() {
-        return boats;
+    public Boats getBoat() {
+        return boat;
     }
 
-    public void setBoats(Boats boats) {
-        this.boats = boats;
+    public void setBoat(Boats boat) {
+        this.boat = boat;
     }
 
     public Cliente getClient() {
@@ -97,7 +97,8 @@ public class Reservaciones implements Serializable  {
     public void setScore(String score) {
         this.score = score;
     }
-    
+
+   
     
     
 }
